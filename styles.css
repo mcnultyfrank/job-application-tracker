@@ -15,7 +15,7 @@ body form {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 body form input {
   width: 30vw;

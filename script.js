@@ -7,6 +7,10 @@ const addInfo = (input, output) => {
             var textnode = document.createTextNode(e.target.value);
             node.appendChild(textnode);
             output.appendChild(node);
+            e.target.value = ""
+            document.createElement("button").addEventListener("click", e => {
+                
+            })
         }
     })
 }
