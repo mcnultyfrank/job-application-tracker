@@ -3,10 +3,10 @@
 const addInfo = (input, output) => {
     input.addEventListener(("keyup"), e => {
         if (e.keyCode === 13) {
-            var node = document.createElement("LI");
-            var textnode = document.createTextNode(e.target.value);
-            node.appendChild(textnode);
-            output.appendChild(node);
+            var list = document.createElement("LI");
+            var listContent = document.createTextNode(e.target.value);
+            list.appendChild(listContent);
+            output.appendChild(list);
             e.target.value = ""
             document.createElement("button").addEventListener("click", e => {
                 
