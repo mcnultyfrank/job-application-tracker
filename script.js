@@ -1,20 +1,26 @@
 
 
 const addInfo = (input, output) => {
-    input.addEventListener(("keyup"), e => {
+    input.addEventListener(("keypress"), e => {
         if (e.keyCode === 13) {
             var list = document.createElement("LI");
-            // var button = document.createElement("Button");
-            // var buttonContent = document.createTextNode("Delete")
+            var button = document.createElement("Button");
+            var buttonContent = document.createTextNode("Delete")
             var listContent = document.createTextNode(e.target.value);
             list.appendChild(listContent);
-            // button.appendChild(buttonContent);
+            button.appendChild(buttonContent);
             output.appendChild(list);
-            // output.appendChild(button);
-            e.target.value = ""
+            list.appendChild(button);
+            e.target.value = ""            
+            button.addEventListener(("click"), e => {
+                output.removeChild(list);
+            })
         }
     })
 }
+
+console.log(document.body);
+
 
 addInfo(document.querySelector(".nameIn"), document.querySelector(".nameOutContainer"));
 addInfo(document.querySelector(".titleIn"), document.querySelector(".titleOutContainer"));
