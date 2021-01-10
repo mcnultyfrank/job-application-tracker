@@ -37,12 +37,19 @@ body form input:focus {
 body section {
   display: flex;
   flex-direction: row;
+  width: 100vw;
 }
-body section ul {
+body section div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100vw;
+}
+body section div ul {
   display: flex;
   flex-direction: column;
 }
-body section li {
+body section div li {
   font-size: 12px;
   list-style: none;
   width: 30vw;
@@ -59,11 +66,17 @@ body section li {
   align-items: center;
   justify-content: space-between;
 }
+body section div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body button {
   cursor: pointer;
   background-color: rgba(126, 198, 242, 0.5);
   border: 1px solid rgba(126, 198, 242, 0.5);
   border-radius: 3px;
+  font-size: 10px;
 }
 body button:hover {
   background-color: #7ec6f2;

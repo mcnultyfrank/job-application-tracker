@@ -6,10 +6,10 @@ const addInfo = (input, output) => {
             var list = document.createElement("LI");
             var button = document.createElement("Button");
             var buttonContent = document.createTextNode("Delete")
-            var listContent = document.createTextNode(e.target.value);
-            localStorage.setItem('name', e.target.value);
+            localStorage.setItem('name', e.target.value)
+            var listContent = document.createTextNode(localStorage.getItem("name"))
             list.appendChild(listContent);
-            button.appendChild(buttonContent);
+            button.appendChild(buttonContent);            
             output.appendChild(list);
             list.appendChild(button);
             e.target.value = ""            
