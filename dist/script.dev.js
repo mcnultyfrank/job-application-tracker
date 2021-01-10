@@ -7,6 +7,7 @@ var addInfo = function addInfo(input, output) {
       var button = document.createElement("Button");
       var buttonContent = document.createTextNode("Delete");
       var listContent = document.createTextNode(e.target.value);
+      localStorage.setItem('name', e.target.value);
       list.appendChild(listContent);
       button.appendChild(buttonContent);
       output.appendChild(list);
@@ -19,7 +20,7 @@ var addInfo = function addInfo(input, output) {
   });
 };
 
-console.log(document.body);
+console.log(localStorage);
 addInfo(document.querySelector(".nameIn"), document.querySelector(".nameOutContainer"));
 addInfo(document.querySelector(".titleIn"), document.querySelector(".titleOutContainer"));
 addInfo(document.querySelector(".descriptionIn"), document.querySelector(".descriptionOutContainer"));

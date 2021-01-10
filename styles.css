@@ -11,15 +11,15 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
 body form {
-  width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 body form input {
-  width: 30vw;
+  width: 28vw;
   height: 5vh;
   margin: 5vh;
   padding: 1vw;
@@ -35,9 +35,12 @@ body form input:focus {
   border: 1px solid rgba(126, 198, 242, 0.5);
 }
 body section {
-  width: 100vw;
   display: flex;
   flex-direction: row;
+}
+body section ul {
+  display: flex;
+  flex-direction: column;
 }
 body section li {
   font-size: 12px;
@@ -45,7 +48,7 @@ body section li {
   width: 30vw;
   height: 10vh;
   padding: 1vh;
-  margin: 1.5vw;
+  margin: 0vw 1.5vw 0vh 1.5vw;
   border-radius: 3px;
   overflow-x: scroll;
   overflow-y: hidden;
